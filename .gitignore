@@ -1,0 +1,15 @@
+node_modules/
+dist/
+playwright-report/
+test-results/
+
+# Auth state files — never commit credentials
+.auth/
+
+# Environment files
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
