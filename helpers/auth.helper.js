@@ -1,13 +1,6 @@
-import { USERS } from '../fixtures/users.js';
-import { LOGIN_SELECTORS } from '../selectors/index.js';
+import USERS from '../fixtures/users.json' assert { type: 'json' };
+import { LOGIN_SELECTORS } from '../selectors/selectors.js';
 
-/**
- * Full login flow: select facility → fill email → fill password → submit.
- * Used by global-setup.js (to save storage state) and login tests (fresh login).
- *
- * @param {import('@playwright/test').Page} page
- * @param {'aa' | 'doctor' | 'pharmacist'} role
- */
 export async function loginAs(page, role) {
   const user = USERS[role];
 
@@ -29,22 +22,3 @@ export async function loginAs(page, role) {
   await page.waitForSelector(LOGIN_SELECTORS.patientListHeading, { timeout: 15_000 });
 }
 
-export function getUserData(role) {
-  return USERS[role];
-}
-
-export function hasPermission(role, permission) {
-  return USERS[role].permissions.includes(permission);
-}
-
-export function canCreateApproval(role) {
-  return hasPermission(role, 'create_approval');
-}
-
-export function canCreatePA(role) {
-  return hasPermission(role, 'create_pa');
-}
-
-export function canViewReports(role) {
-  return hasPermission(role, 'view_reports');
-}

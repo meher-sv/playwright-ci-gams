@@ -1,6 +1,6 @@
 import { test, expect } from '../../fixtures/index.js';
 import { loginAs } from '../../helpers/auth.helper.js';
-import { LOGIN_SELECTORS } from '../../selectors/index.js';
+import { LOGIN_SELECTORS } from '../../selectors/selectors.js';
 
 // All login tests start unauthenticated — override the project-level storageState
 test.use({ storageState: { cookies: [], origins: [] } });
@@ -102,7 +102,7 @@ test.describe('Login - Logout', () => {
     await loginAs(page, userRole);
     // TODO: share the nav header HTML so we can set the exact logout selector
     await page.locator('[class*="user"], [class*="avatar"], [class*="profile"]').first().click();
-    await page.locator('text=Logout, text=Sign out, text=Log out').first().click();
+    await page.locator('text=Log out').click();
     await expect(page.locator(LOGIN_SELECTORS.loginButton)).toBeVisible();
   });
 

@@ -1,13 +1,16 @@
 {
-  "enabledPlugins": {
-    "superpowers@superpowers-dev": true,
-    "claude-mem@thedotmack": true
-  },
   "permissions": {
     "allow": [
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(rm /home/meher.sv@TA.COM/Desktop/GAMS_Playwright/tests/approvals/approvals.spec.js /home/meher.sv@TA.COM/Desktop/GAMS_Playwright/helpers/approval.helper.js /home/meher.sv@TA.COM/Desktop/GAMS_Playwright/fixtures/approvals.js)",
+      "Bash(rmdir /home/meher.sv@TA.COM/Desktop/GAMS_Playwright/tests/approvals)",
+      "Bash(npx playwright:*)"
     ]
+  },
+  "enabledPlugins": {
+    "superpowers@superpowers-dev": true,
+    "claude-mem@thedotmack": true
   }
 }

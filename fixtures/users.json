@@ -1,0 +1,17 @@
+{
+  "aa": {
+    "username": "atieh.mohammadrahimi@mh.org.au",
+    "password": "123",
+    "facility": "Version1 Test Site"
+  },
+  "doctor": {
+    "username": "saleena.d+ium3@teamta.in",
+    "password": "Gams@123#",
+    "facility": "Version1 Test Site"
+  },
+  "pharmacist": {
+    "username": "saleena.d+ium2@teamta.in",
+    "password": "Gams@123#",
+    "facility": "Version1 Test Site"
+  }
+}
